@@ -260,8 +260,10 @@
 	NSURLRequest* request = [NSURLRequest requestWithURL:url 
 										  cachePolicy:NSURLRequestReloadIgnoringLocalCacheData 
 								          timeoutInterval:policy.urlTimeoutTime];
-	self.urlConn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-	[urlConn release];
+	
+    NSURLConnection* connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    self.urlConn = connection;
+	[connection release];
 	if (urlConn==nil) {
 		NSLog(@"HJMOHandler nil URLConnection for %@",url);
 		state=stateFailed;
