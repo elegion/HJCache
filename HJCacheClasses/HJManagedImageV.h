@@ -57,6 +57,8 @@
 @property (nonatomic, retain) UIActivityIndicatorView* loadingWheel;
 @property (nonatomic, retain) id <HJManagedImageVDelegate> callbackOnSetImage;
 @property (nonatomic, retain) id <HJManagedImageVDelegate> callbackOnCancel;
+@property (nonatomic, assign) UIViewContentMode imageContentMode;
+@property (nonatomic, assign) UIActivityIndicatorViewStyle wheelStyle;
 
 -(void) clear;
 -(void) markCancelled;
