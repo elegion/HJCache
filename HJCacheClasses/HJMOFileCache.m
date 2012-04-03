@@ -128,6 +128,7 @@
 	[[NSFileManager defaultManager] moveItemAtPath:loadingFilename toPath:readyFilename error:&e];
 	if (e) {
 		NSLog(@"HJMOFileCache failed to move loading file to ready file %@",readyFilename);
+		NSLog(@"error: %@", e);
 		return nil;
 	} else {
 		if (isCounting) {
