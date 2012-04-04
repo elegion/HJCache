@@ -106,6 +106,7 @@
 
 -(void) markCancelled {
 	isCancelled = YES;
+    [self.moHandler cancelLoading];
 	[callbackOnCancel managedImageCancelled:self];
 }
 
